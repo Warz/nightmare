@@ -15,10 +15,13 @@ Vue.use(VueCompositionApi);
 However I should not need to use any of them (?) in vue-jstree-extended because 
 they are all included in `nightmare`.   
 
-I added these lines to make the tree appear. But I'm getting this error 
-when I right click and item and selects cut, then paste into another: 
+These three lines was required in order to make errors go away on load. But I'm getting this error 
+when I right click an item and selects cut, then paste into another item: 
 
 `[Vue warn]: You may have an infinite update loop in a component render function.`
+
+I am not getting this error in the `vue-jstree-extended` project, only when it's
+included and ran from here. It's included using symlink, perhaps that is relevant?
 
 If I don't add those 3 lines I'm getting this error instead:
 
@@ -33,11 +36,32 @@ In vue-jstree-extended I have set peerDependencies in package.json:
   }
 ```
 
+It's declared as peerDependency to avoid code duplication
 
+**We need to fix so that:**
+1. The tree works both while running dev in the library (vue-jstree-extended) and 
+   when including the library into nightmare. 
+2. There is no code duplication (no need for importing Vue and Composition API twice)
+3. Errors are fully resolved in tree (no infinite loop etc)
+4. It needs to work with the same import scheme that are being used now:
+ `import { VJstree, useTreeActions, useMultiTree} from 'vue-jstree-extended'` (using /dist not source files)
 
 ## Project setup
 ```
 npm install
+```
+
+Clone [my fork](https://github.com/Warz/vue-jstree) of `vue-jstree-extended` 
+as a separate project/directory. Then `cd` to the folder (vue-jstree-extended/)
+and type:  
+
+```
+npm link
+```
+
+then cd back to this folder (nightmare/) and type:
+```
+npm link vue-jstree-extended
 ```
 
 ### Compiles and hot-reloads for development
