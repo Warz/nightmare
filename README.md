@@ -66,15 +66,6 @@ then cd back to this folder (nightmare/) and type:
 ```
 npm link vue-jstree-extended
 ```
-
-## Library setup
-
-You need to build it between each change, since project consumes /dist. To do so
-`cd` to the folder (vue-jstree-extended/) and type:
-```
-npm run-script build
-```
-
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -91,4 +82,14 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://cli.vuejs.org/config/)
+
+## Library setup
+
+You need to build it between each change, since project consumes /dist. To do so
+`cd` to the folder (vue-jstree-extended/) and type:
+```
+npm run-script build
+```
+
+
