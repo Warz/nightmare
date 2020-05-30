@@ -46,6 +46,9 @@ It's declared as peerDependency to avoid code duplication
 4. It needs to work with the same import scheme that are being used now:
  `import { VJstree, useTreeActions, useMultiTree} from 'vue-jstree-extended'` (using /dist not source files)
 
+See this gif video that explains the issue: 
+https://i.imgur.com/XExWlgD.gif (localhost:8081 is the library and localhost:8082 is the project where tree is broken)
+
 ## Project setup
 ```
 npm install
@@ -62,6 +65,14 @@ npm link
 then cd back to this folder (nightmare/) and type:
 ```
 npm link vue-jstree-extended
+```
+
+## Library setup
+
+You need to build it between each change, since project consumes /dist. To do so
+`cd` to the folder (vue-jstree-extended/) and type:
+```
+npm run-script build
 ```
 
 ### Compiles and hot-reloads for development
