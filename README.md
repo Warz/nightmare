@@ -93,3 +93,8 @@ npm run-script build
 ```
 
 
+## Links
+- https://github.com/vuejs/vue-cli/issues/4271
+- https://github.com/vuejs/composition-api/issues/228
+- https://stackoverflow.com/questions/61885716/uncaught-error-vue-composition-api-must-call-vue-useplugin-before-using-any/61907559#61907559
+- https://github.com/vuejs/composition-api/issues/181
