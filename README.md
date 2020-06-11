@@ -94,7 +94,13 @@ npm run-script build
 
 
 ## Links
-- https://github.com/vuejs/vue-cli/issues/4271
+- https://github.com/vuejs/composition-api/issues/340
+- https://github.com/vuejs/composition-api/issues/356
 - https://github.com/vuejs/composition-api/issues/228
-- https://stackoverflow.com/questions/61885716/uncaught-error-vue-composition-api-must-call-vue-useplugin-before-using-any/61907559#61907559
 - https://github.com/vuejs/composition-api/issues/181
+- https://github.com/vuejs/vue-cli/issues/4271
+- https://stackoverflow.com/questions/61885716/uncaught-error-vue-composition-api-must-call-vue-useplugin-before-using-any/61907559#61907559
+- https://github.com/willtpwise/vue-comp-package/tree/88b995b6e68cc235e3511429c78059e494773b8a
+- (not relevant?) https://stackoverflow.com/questions/31169760/how-to-avoid-react-loading-twice-with-webpack-when-developing/38818358#38818358
+- medium.com/@penx/managing-dependencies-in-a-node-package-so-that-they-are-compatible-with-npm-link-61befa5aaca7
+
