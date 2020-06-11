@@ -55,7 +55,26 @@ npm install
 ```
 
 Clone [my fork](https://github.com/Warz/vue-jstree) of `vue-jstree-extended` 
-as a separate project/directory. Then `cd` to the folder (vue-jstree-extended/)
+as a separate project/directory. 
+
+Now we need a link to the library from nigtmare. There are two alternatives:
+
+#### Alternative 1: Using file link
+ 
+ 
+I've setup a file link in package.json. 
+Open package.json find this line:
+    
+    "vue-jstree-extended": "file:../../jstree-extended-warz/vue-jstree"
+    
+Make sure the path reflects where you have placed the vue-jstree-extended folder.
+
+#### Alternative 2: Using npm link command
+Open package.json and remove this line:
+
+    "vue-jstree-extended": "file:../../jstree-extended-warz/vue-jstree"
+    
+Then `cd` to the folder (vue-jstree-extended/)
 and type:  
 
 ```
@@ -75,14 +94,6 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/)
 
 ## Library setup
 
